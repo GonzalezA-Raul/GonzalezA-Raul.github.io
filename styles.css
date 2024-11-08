@@ -33,32 +33,38 @@ section {
     padding: 1rem;
     background-color: #fff;
     margin-top: 1rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Transición suave para el contenedor del proyecto */
 }
 
-/* Nuevo estilo para el título del proyecto */
+/* Estilo para el título del proyecto */
 .project h3 {
     cursor: pointer;
     background-color: #0066cc;
     color: white;
     padding: 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Transición suave para el fondo del título */
 }
 
 .project h3:hover {
-    background-color: #004c99;
+    background-color: #004c99; /* Color al pasar el ratón */
 }
 
 /* Ocultar el contenido del proyecto inicialmente */
 .project-content {
-    display: none;
-    padding-top: 10px;
+    max-height: 0; /* Altura máxima inicial es cero */
+    overflow: hidden; /* Ocultar contenido que excede la altura máxima */
+    transition: max-height 0.5s ease-out; /* Transición suave para la altura máxima */
 }
 
 /* Mostrar el contenido al pasar el ratón sobre el proyecto */
 .project:hover .project-content {
-    display: block;
+    max-height: 200px; /* Ajusta este valor según la altura necesaria para mostrar todo el contenido */
+}
+
+/* Justificar el texto en la sección "Sobre Mí" */
+#about p {
+    text-align: justify; /* Justificar el texto */
 }
 
 footer {

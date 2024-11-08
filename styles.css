@@ -33,6 +33,32 @@ section {
     padding: 1rem;
     background-color: #fff;
     margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Nuevo estilo para el título del proyecto */
+.project h3 {
+    cursor: pointer;
+    background-color: #0066cc;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project h3:hover {
+    background-color: #004c99;
+}
+
+/* Ocultar el contenido del proyecto inicialmente */
+.project-content {
+    display: none;
+    padding-top: 10px;
+}
+
+/* Mostrar el contenido al pasar el ratón sobre el proyecto */
+.project:hover .project-content {
+    display: block;
 }
 
 footer {

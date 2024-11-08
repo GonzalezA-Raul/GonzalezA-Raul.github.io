@@ -28,13 +28,34 @@
                         <li>Cálculo de media aritmética de las tiradas</li>
                         <li>Estadísticas detalladas de las caras de los dados</li>
                     </ul>
-                    <a href="https://github.com/GonzalezA-Raul/Proyecto_Casino" target="_blank">Ver en GitHub</a>
+                    <a href="https://github.com/GonzalezA-Raul/Proyecto_Casino" target="_blank" class="github-link">Ver en GitHub</a>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>Conéctate conmigo en <a href="https://www.linkedin.com/in/raul-gonz%C3%A1lez-alguacil-316082266/">LinkedIn</a></p>
+        <p>Conéctate conmigo en <a href="https://www.linkedin.com/in/raul-gonz%C3%A1lez-alguacil-316082266/">LinkedIn</a> 🌐</p>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const projectTitles = document.querySelectorAll('.project h3');
+        
+        projectTitles.forEach(title => {
+            title.addEventListener('click', function() {
+                const project = this.closest('.project');
+                if (window.innerWidth <= 768) {
+                    project.classList.toggle('active');
+                    const content = project.querySelector('.project-content');
+                    if (project.classList.contains('active')) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>

@@ -1,61 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Raúl González</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Raúl González</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="imgs/logo_rg.png">
 </head>
 <body>
-    <header>
-        <h1>Raúl González</h1>
-        <p>Estudiante de Desarrollo de Aplicaciones Multiplataforma</p>
-    </header>
-    <main>
-        <section id="about">
-            <h2>Sobre Mí</h2>
-            <p>Soy estudiante de Desarrollo de Aplicaciones Multiplataforma, apasionado por la tecnología y el aprendizaje continuo. Actualmente, estoy desarrollando habilidades prácticas en Python, Git, Bash y MySQL. Además, planeo ampliar mis conocimientos en desarrollo web con HTML y CSS próximamente.</p>
-        </section>
-        <section id="projects">
-            <h2>Proyectos</h2>
-            <div class="project">
-                <h3>🎲 Proyecto Casino: Juego de Dados</h3>
-                <div class="project-content">
-                    <p>Simulación de un juego de dados con funciones estadísticas, implementado en Python.</p>
-                    <ul>
-                        <li>Interfaz de línea de comandos</li>
-                        <li>Juego de dados con dos dados</li>
-                        <li>Cálculo de media aritmética de las tiradas</li>
-                        <li>Estadísticas detalladas de las caras de los dados</li>
-                    </ul>
-                    <a href="https://github.com/GonzalezA-Raul/Proyecto_Casino" target="_blank" class="github-link">Ver en GitHub</a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Conéctate conmigo en <a href="https://www.linkedin.com/in/raul-gonz%C3%A1lez-alguacil-316082266/">LinkedIn</a> 🌐</p>
-    </footer>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const projectTitles = document.querySelectorAll('.project h3');
+  <!-- Cabecera y navegación fija -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+         <!-- Logo genérico: Reemplaza esta imagen por tu foto o logo en el futuro -->
+         <a href="index.html">
+           <img src="imgs/logo_rg.png" alt="Logo de Raúl González" class="profile-pic" width="50" height="50">
+         </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+         <li><a href="#home">Inicio</a></li>
+         <li><a href="#about">Sobre mí</a></li>
+         <li><a href="#projects">Proyectos</a></li>
+         <li><a href="#skills">Habilidades</a></li>
+         <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <div class="nav-controls">
+         <!-- Toggle para Dark/Light Mode -->
+         <button id="toggle-button">Modo Claro</button>
+         <!-- Botón para menú móvil -->
+         <button id="menu-toggle" class="menu-toggle">☰</button>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- Sección de inicio (Hero) -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h1>¡Hola! Soy Raúl González</h1>
+        <p>Estudiante de Desarrollo de Software en constante aprendizaje.</p>
+      </div>
+    </section>
+    
+    <!-- Sección "Sobre mí" -->
+    <section id="about" class="section about-section">
+      <h2>Sobre mí</h2>
+      <p>
+         <!-- Edita este párrafo con tus datos personales y profesionales -->
+         Soy un apasionado del desarrollo de software, especializado en Python y bases de datos como MySQL. 
+         Me encanta aprender nuevas tecnologías y aplicar mis conocimientos en proyectos prácticos. 
+         Actualmente, estoy explorando el desarrollo web con <strong>Flask</strong> y <strong>Django</strong>, 
+         y ampliando mis habilidades en HTML, CSS y JavaScript.
+      </p>
+      <!-- Comentario: Aquí puedes incluir tu foto de perfil adicional si lo deseas -->
+    </section>
+    
+    <!-- Sección de Proyectos -->
+    <section id="projects" class="section projects-section">
+      <h2>Proyectos</h2>
+      <div class="project-card">
+        <h3>🎲 Proyecto Casino: Juego de Dados</h3>
+        <p>Simulación de un juego de dados con funciones estadísticas, implementado en Python.</p>
+        <ul>
+          <li>Interfaz de línea de comandos</li>
+          <li>Juego de dados con dos dados</li>
+          <li>Cálculo de media aritmética y estadísticas</li>
+        </ul>
+        <!-- Comentario: Aquí puedes incluir capturas de pantalla del proyecto -->
+        <a href="https://github.com/GonzalezA-Raul/Proyecto_Casino" target="_blank" class="btn">Ver en GitHub</a>
+      </div>
+    </section>
+    
+    <!-- Sección de Habilidades -->
+    <section id="skills" class="section skills-section">
+      <h2>Habilidades</h2>
+      
+      <div class="skills-group">
+        <h3>Con las que ya me defiendo</h3>
+        <div class="skills-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="Python" alt="Python">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" title="MySQL" alt="MySQL">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" alt="Git">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" title="Bash" alt="Bash">
+        </div>
+      </div>
+      
+      <div class="skills-group">
+        <h3>Las que estoy aprendiendo</h3>
+        <div class="skills-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" title="Docker" alt="Docker">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML5" alt="HTML5">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS3" alt="CSS3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" title="Flask" alt="Flask" class="highlight">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" title="Django" alt="Django" class="highlight">
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sección de Contacto -->
+    <section id="contact" class="section contact-section">
+      <h2>Contacto</h2>
+      <p>Puedes contactarme a través del siguiente formulario o descargar mi CV.</p>
+      <form action="https://formsubmit.co/gonzalezalguacil.raul@gmail.com" method="POST">
+        <!-- Protecciones extra (opcional pero recomendado) -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Redirigir a la página de agradecimiento después del envío -->
+        <input type="hidden" name="_next" value="agradecimiento.html">
         
-        projectTitles.forEach(title => {
-            title.addEventListener('click', function() {
-                const project = this.closest('.project');
-                if (window.innerWidth <= 768) {
-                    project.classList.toggle('active');
-                    const content = project.querySelector('.project-content');
-                    if (project.classList.contains('active')) {
-                        content.style.display = 'block';
-                    } else {
-                        content.style.display = 'none';
-                    }
-                }
-            });
-        });
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
+        <button type="submit" class="btn">Enviar mensaje</button>
+      </form>
+      <br>
+      <a href="#" class="btn" id="cv-download">Descargar CV</a>
+      <!-- Comentario: Reemplaza el href="#" con el enlace a tu CV en PDF cuando lo tengas -->
+    </section>
+    
+  </main>
+  
+  <!-- Footer (aparece al final del contenido) -->
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="https://github.com/GonzalezA-Raul" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" title="GitHub" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/raul-gonz%C3%A1lez-alguacil-316082266/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" title="LinkedIn" alt="LinkedIn">
+      </a>
+    </div>
+    <p>© 2025 Raúl González. Todos los derechos reservados.</p>
+  </footer>
+  
+  <script>
+    // Toggle para Dark/Light Mode
+    const toggleButton = document.getElementById('toggle-button');
+    toggleButton.addEventListener('click', function() {
+      document.body.classList.toggle('light-mode');
+      toggleButton.textContent = document.body.classList.contains('light-mode') ? 'Modo Oscuro' : 'Modo Claro';
     });
-    </script>
+    
+    // Toggle para menú móvil
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

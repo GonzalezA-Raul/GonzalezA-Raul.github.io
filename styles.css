@@ -1,115 +1,281 @@
-/* Estilos generales */
-body {
+/* Mobile-first: Diseño base */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #004c99;
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --gradient: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+    --accent-color: #ff4081;
+    --btn-bg: #333;
+    --btn-hover: #555;
+    --transition-speed: 0.3s;
+  }
+  
+  body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+  }
+  
+  /* Modo claro */
+  body.light-mode {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --gradient: linear-gradient(135deg, #ffffff, #e0e0e0);
+  }
+  
+  body.light-mode a,
+  body.light-mode .nav-links a,
+  body.light-mode .nav-toggle button {
+    color: var(--text-color);
+  }
+  
+  /* Cabecera fija y navegación */
+  .site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--gradient);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo img.profile-pic {
+    border-radius: 50%;
+  }
+  
+  .nav-links {
+    list-style: none;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-h1 {
     margin: 0;
-}
-
-main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-#about p {
-    text-align: justify; /* Justificar el texto en la sección "Sobre Mí" */
-}
-
-.project {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    background-color: #fff;
-    margin-top: 1rem;
-}
-
-/* Estilo para el título del proyecto */
-.project h3 {
-    cursor: pointer;
-    background-color: #0066cc;
-    color: white;
-    padding: 10px;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color var(--transition-speed);
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  .nav-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-controls button {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 0.4rem 0.8rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.project h3:hover {
-    background-color: #004c99;
-}
-
-/* Contenido del proyecto */
-.project-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-}
-
-/* Mostrar contenido al pasar el ratón en dispositivos de escritorio */
-@media (hover: hover) and (pointer: fine) {
-    .project:hover .project-content {
-        max-height: 500px; /* Ajusta este valor según sea necesario */
-    }
-}
-
-/* Estilo para el enlace a GitHub */
-.github-link {
+    cursor: pointer;
+    transition: background var(--transition-speed);
+    margin-left: 0.5rem;
+  }
+  
+  .nav-controls button:hover {
+    background: var(--btn-hover);
+  }
+  
+  /* Botón de menú móvil (visible solo en móvil) */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Compensar el espacio del header */
+  main {
+    margin-top: 70px;
+    padding: 1rem;
+  }
+  
+  /* Secciones */
+  .section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: var(--gradient);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+  
+  /* About Section */
+  .about-section p {
+    text-align: justify;
+  }
+  
+  /* Projects Section */
+  .projects-section .project-card {
+    background: var(--gradient);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform var(--transition-speed);
+  }
+  
+  .projects-section .project-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .projects-section .project-card h3 {
+    margin-top: 0;
+  }
+  
+  .projects-section .project-card a.btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #333;
-    color: white;
+    padding: 0.5rem 1rem;
+    background: var(--btn-bg);
+    color: var(--text-color);
     text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-}
-
-.github-link:hover {
-    background-color: #555;
-}
-
-footer {
+    border-radius: 5px;
+    transition: background var(--transition-speed);
+  }
+  
+  .projects-section .project-card a.btn:hover {
+    background: var(--btn-hover);
+  }
+  
+  /* Skills Section */
+  .skills-section .skills-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .skills-section h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .skills-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform var(--transition-speed);
+  }
+  
+  .skills-icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .skills-icons img.highlight {
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+  }
+  
+  /* Contact Section */
+  .contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .contact-section button.btn,
+  #cv-download {
+    background: var(--btn-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .contact-section button.btn:hover,
+  #cv-download:hover {
+    background: var(--btn-hover);
+  }
+  
+  /* Footer */
+  .site-footer {
     text-align: center;
     padding: 1rem;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-a {
-    color: #0066cc; 
-}
-
-a:hover {
-   text-decoration: underline; 
-}
-
-/* Media query para dispositivos móviles */
-@media only screen and (max-width: 768px) {
-    
-   .project-content {
-       max-height: none; 
-       display: none; 
-   }
-
-   .project.active .project-content {
-       display: block; 
-   }
-}
+    background: var(--gradient);
+    color: var(--text-color);
+  }
+  
+  .site-footer .social-links {
+    margin-bottom: 0.5rem;
+  }
+  
+  .site-footer .social-links a {
+    margin: 0 0.5rem;
+  }
+  
+  .site-footer .social-links img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Responsive: menú móvil */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      background: var(--gradient);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      display: none;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .nav-links li {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .menu-toggle {
+      display: inline-block;
+    }
+  }
+  
+  /* Media query para pantallas grandes */
+  @media (min-width: 769px) {
+    main {
+      padding: 2rem 3rem;
+    }
+  }
+  

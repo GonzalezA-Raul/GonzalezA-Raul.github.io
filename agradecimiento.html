@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Gracias! - Raúl González</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="imgs/logo_rg.png">
+</head>
+<body>
+  <!-- Cabecera con navegación: el logo es un botón para volver al inicio -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+         <!-- Logo clicable: vuelve a index.html -->
+         <a href="index.html">
+           <img src="imgs/logo_rg.png" alt="Logo de Raúl González" class="profile-pic" width="50" height="50">
+         </a>
+      </div>
+      <ul class="nav-links">
+         <li><a href="index.html#home">Inicio</a></li>
+         <li><a href="index.html#about">Sobre mí</a></li>
+         <li><a href="index.html#projects">Proyectos</a></li>
+         <li><a href="index.html#skills">Habilidades</a></li>
+         <li><a href="index.html#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="section agradecimiento-section">
+      <h2>¡Gracias por tu mensaje!</h2>
+      <p>
+        Hemos recibido tu mensaje y pronto me pondré en contacto contigo. ¡Gracias por comunicarte!
+      </p>
+      <div class="agradecimiento-buttons">
+        <!-- Botón extra: Volver al Inicio -->
+        <a href="index.html" class="btn">Volver al Inicio</a>
+        <!-- Botón extra adicional: Ver Proyectos -->
+        <a href="index.html#projects" class="btn">Ver Proyectos</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="https://github.com/GonzalezA-Raul" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" title="GitHub" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/raul-gonz%C3%A1lez-alguacil-316082266/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" title="LinkedIn" alt="LinkedIn">
+      </a>
+    </div>
+    <p>© 2025 Raúl González. Todos los derechos reservados.</p>
+  </footer>
+  
+  <script>
+    // (Si deseas agregar el toggle de modo oscuro en esta página, puedes hacerlo)
+    const toggleButton = document.getElementById('toggle-button');
+    if (toggleButton) {
+      toggleButton.addEventListener('click', function() {
+        document.body.classList.toggle('light-mode');
+        toggleButton.textContent = document.body.classList.contains('light-mode') ? 'Modo Oscuro' : 'Modo Claro';
+      });
+    }
+  </script>
+</body>
+</html>
